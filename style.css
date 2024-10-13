@@ -1,0 +1,100 @@
+/* 전체 페이지 스타일 */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* 프로젝트 섹션 스타일 */
+section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* 프로젝트 목록 스타일 */
+#project-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4열 그리드 */
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* 각 프로젝트 카드 스타일 */
+#project-list li {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#project-list li:hover {
+  transform: translateY(-10px); /* 마우스 호버 시 위로 살짝 올라감 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#project-list li strong {
+  font-size: 1.1rem;
+  color: #4CAF50;
+}
+
+#project-list li a {
+  display: block;
+  margin-top: 10px;
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#project-list li a:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  #project-list {
+    grid-template-columns: repeat(3, 1fr); /* 화면 크기에 따라 3열로 변환 */
+  }
+}
+
+@media (max-width: 768px) {
+  #project-list {
+    grid-template-columns: repeat(2, 1fr); /* 태블릿 크기에서는 2열 */
+  }
+}
+
+@media (max-width: 576px) {
+  #project-list {
+    grid-template-columns: 1fr; /* 모바일에서는 1열 */
+  }
+}
